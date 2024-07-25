@@ -87,7 +87,7 @@ KLOR is a 36-42 key column-staggered split keyboard. It supports a per-key RGB m
 
 ## PCB 
 
-[Here](/PCB/) you can find the KiCad files and Gerbers for the KLOR. 
+[Here](/PCB/) you can find the KiCad files and Gerbers for the KLOR 1.3 (tested working with JLCPCB) and 1.4 (this version). 
 
 ***
 
