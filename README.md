@@ -1,6 +1,9 @@
 ## Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4)
 
 ## CHANGELOG
+25/07/2024
+-  Initial commit with refactored PCB design for SK6812 Mini-E South facing ARGB LEDs
+
 30/07/2024
 -  Correction to SMD footprints for Paste Layers for diodes, reset switch and speaker.
 -  ZMK Firmware modifications in order to be able to set per rotation pulses for each encoder. Both encoders work as expected. RGB light has been enabled by default as well.
