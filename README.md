@@ -24,7 +24,7 @@ So here you will find a completely refactored PCB design of the KLOR project for
 
 - I have tried to keep the overall design paradigm so all the good stuff is still there!!
 
-- I have very extensively refactored the PCB layout (3 days of intense work) to clean up the various little issues that were sparkled around the original design including :
+- I have very extensively refactored the PCB layout (3 days of intense work) to clean up the various little issues that were sprinkled around the original design including :
 
   
   Rerouting of 90% of the PCB. Healthier and more rational overall routing, at least that's my belief...
