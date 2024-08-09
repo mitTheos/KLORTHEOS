@@ -1,6 +1,10 @@
 # Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4)
 
 # CHANGELOG
+09/08/2024
+- Correction of a 0.45 mm interference between hot swap socket and bottom of haptic buzz module. The module has been moved upwards by 0.6 mm to clear the interference for those willing to install the stock haptic module.
+- An alternative design for a DIY haptic module is included if you can get a DRV2605LDGSR driver chip and a ELV1411A linear motor. Hot air/plate soldering is required. This module is 0.8 mm shorter so there will definitely be no interference whatever version of PCB you have. I recommend a thinner PCB (1.2 mm) for this module
+
 07/08/2024
 -  Production validation of the new design. Full build completed and tested. Current Paste Layers are functionnal for those willing to order stencils.
 
@@ -20,7 +24,7 @@
 -  I recommend you stick with recommended diodes. Too small diodes can be a pain to orientate properly without proper magnification
 -  Choose your MCU wisely: for wireless connectivity, Nice Nano V2 is fine and kind of the only option at this moment. But you'll loose some functionalities such as speaker, haptic feedback and less display used for logos. On the bright side I can confirm that both encoders do work flawlessly with recent versions of ZMK. When you wish to make the extra steps, ZMK firmware is a bit tricky to setup properly, but with some time you may be able to implement what you want. Keep in mind that the current official Firmware is based on an older ZMK codebase and some significant changes have happned recently, in terms of syntax, making it almost mandatory to do some changes in the original config and device tree files (for instance in order to have precise pulses per rotation for each encoder or to enable RGB)
 -  For wired builds I would go with RP3040 Pro Micro boards as it seems very compatible with QMK and much more powerful compared with 32U4 MCU wich is a bit outdated now. QMK is very good IMHO apart from wireless options which is a real bummer...
--  The stock haptic feedback modules are extremly expensive at around 15 Euros each before shipping and are only offered by one single manufacturer. I could not find a better option yet. Let me know if you have some ideas to get out of this situation. It will require a PCB and firmware update, but I think that it would be nice to have this functionality for a decent price.
+-  The stock haptic feedback modules are extremly expensive at around 15 Euros each before shipping and are only offered by one single manufacturer. I have designed a DIY version of this module that should fit nicely. This module requires some SMD skills and equipment to be assembled. Parts values can be found on TI documentastion for the driver chip itself. I will be using 2.2k pullup resistors and 1uF capacitors. Diode is optional and will serve as a reverse polarity protection. Same modcels as the rest of the keyboard could be used. Voltage drop should not be an issue as the driver chip will work with VCC ranging from 2 to 5.5V.
 -  There are no real proper options for socketed MCU mount. So far the best option is to use machined round pins female headers with some sort of wire or salvaged through hole part leg to act as male pins. Complementary male round pins headers end up beeing a bit too high IMO. I am considering getting some 0.6 mm gold plated wire to act as male pins. Dedicated machined pins in the correct size are outrageously expensive.
 
 # FIRMWARE
