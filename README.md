@@ -1,6 +1,6 @@
-## Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4)
+# Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4)
 
-## CHANGELOG
+# CHANGELOG
 07/08/2024
 -  Production validation of the new design. Full build completed and tested. Current Paste Layers are functionnal for those willing to order stencils.
 
@@ -13,7 +13,22 @@
 
 --> If you intend to generate your own gerbers instead of the ones provided, make sure to process drill files AND flag the "Substract soldermask layer from copper pads" option (otherwise the KLOR Logo will superimpose on some of the SMD pads rendering soldering impossible without manual scratching of the covered pads). Guess how I know...
 
-# CONTEXT
+# FABRICATION NOTES
+-  Compared with 1.3 design you only need different LED modules (SK6812 Mini-E instead of WS2812 3535)
+-  Beware that Gateron hot swappable sockets must be oriented properly with their rounded edge against the central hole. If mounted upside down you won't be able to insert the switch. Kailh sockets don't have the same symetry in their shape so no risk to mount them upside down.
+-  Be careful when selecting your hot swappable sockets as all brands have normal and low profile options with different pin placements. You can only use normal sockets on this design. If there is some interest I may produce a low profile south facing version eventually.
+-  I recommend you stick with recommended diodes. Too small diodes can be a pain to orientate properly without proper magnification
+-  Choose your MCU wisely: for wireless connectivity, Nice Nano V2 is fine and kind of the only option at this moment. But you'll loose some functionalities such as speaker, haptic feedback and less display used for logos. On the bright side I can confirm that both encoders do work flawlessly with recent versions of ZMK. When you wish to make the extra steps, ZMK firmware is a bit tricky to setup properly, but with some time you may be able to implement what you want. Keep in mind that the current official Firmware is based on an older ZMK codebase and some significant changes have happned recently, in terms of syntax, making it almost mandatory to do some changes in the original config and device tree files (for instance in order to have precise pulses per rotation for each encoder or to enable RGB)
+-  For wired builds I would go with RP3040 Pro Micro boards as it seems very compatible with QMK and much more powerful compared with 32U4 MCU wich is a bit outdated now. QMK is very good IMHO apart from wireless options which is a real bummer...
+-  The stock haptic feedback modules are extremly expensive at around 15 Euros each before shipping and are only offered by one single manufacturer. I could not find a better option yet. Let me know if you have some ideas to get out of this situation. It will require a PCB and firmware update, but I think that it would be nice to have this functionality for a decent price.
+-  There are no real proper options for socketed MCU mount. So far the best option is to use machined round pins female headers with some sort of wire or salvaged through hole part leg to act as male pins. Complementary male round pins headers end up beeing a bit too high IMO. I am considering getting some 0.6 mm gold plated wire to act as male pins. Dedicated machined pins in the correct size are outrageously expensive.
+
+# FIRMWARE
+My version of ZMK firmware is located here:
+https://github.com/Lefuneste83/zmk-config-klor
+It has both encoders working, precise pulse per rotation adjustments and RGB enabled by default
+
+## CONTEXT
 I have just completed my build of the 1.3 and found it a bit frustrating to assemble, despite my 13 year experience with this kind of project. Don't get me wrong the KLOR project is absolutely marvelous, but the PCB design starts to show its age IMHO, in the details of the layout in particular. Technology wise it is one, if not the best project out there hands down.
 
 So here you will find a completely refactored PCB design of the KLOR project for 2024 including :
