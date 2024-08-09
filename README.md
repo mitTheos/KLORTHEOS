@@ -64,6 +64,7 @@ KLOR is a 36-42 key column-staggered split keyboard. It supports a per-key RGB m
 
 ## RENDERING OF THIS FORK (Rev 1.4)
 
+![KLOR layouts](/docs/images/Klor_1.4_picture6.jpg)
 ![KLOR layouts](/docs/images/Klor_1.4_picture4.png)
 ![KLOR layouts](/docs/images/Klor_1.4_picture5.png)
 ![KLOR layouts](/docs/images/Klor_1.4_picture1.png)
