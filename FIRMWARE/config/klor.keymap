@@ -132,7 +132,7 @@ label= "RAISE"                                                 ;
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │ RGB_SPI │ RGB_HUI │         │         │    {    │                    │    }    │   LEFT  │   UP    │  RIGHT  │   HOME  │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │ RGB_BRI │ RGB_EFF │         │         │         │    [    │                    │    ]    │         │  DOWN   │         │         │  P UP   │
+   │ RGB_BRI │ RGB_EFF │         │         │         │    [    │                    │    ]    │         │  DOWN   │         │  PSCRN  │  P UP   │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
    │ RGB_BRD │ RGB_SPD │ RGB_HUD │         │         │    (    ││  MUTE  ││PLY/PASE││    )    │         │         │         │   END   │ P DOWN  │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
@@ -141,8 +141,8 @@ label= "RAISE"                                                 ;
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
                     &rgb_ug RGB_SPI &rgb_ug RGB_HUI &trans    &trans &kp LBRC                       &kp RBRC &kp LEFT &kp UP   &kp RIGHT &kp HOME
-    &rgb_ug RGB_BRI &rgb_ug RGB_EFF &trans          &trans    &trans &kp LBKT                       &kp RBKT &trans   &kp DOWN &trans    &trans  &kp PG_UP
-    &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_HUD &trans    &trans &kp LPAR &kp C_MUTE  &kp K_PP  &kp RPAR &trans   &trans   &trans    &kp END &kp PG_DN
+    &rgb_ug RGB_BRI &rgb_ug RGB_EFF &trans          &trans    &trans &kp LBKT                       &kp RBKT &trans   &kp DOWN &trans    &kp PSCRN &kp PG_UP
+    &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_HUD &trans    &trans &kp LPAR &kp C_MUTE  &kp K_PP  &kp RPAR &trans   &trans   &trans    &kp END   &kp PG_DN
                                                     &trans    &trans &trans   &mo LSHFT   &mo RSHFT &trans   &trans   &mo ADJUST  
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
