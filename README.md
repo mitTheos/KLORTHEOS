@@ -39,7 +39,7 @@ It has both encoders working, precise pulse per rotation adjustments and RGB ena
 Config files for both QMK and ZMK can be found here:
 https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE
 
-## CONTEXT
+# CONTEXT
 I have just completed my build of the 1.3 and found it a bit frustrating to assemble, despite my 13 year experience with this kind of project. Don't get me wrong the KLOR project is absolutely marvelous, but the PCB design starts to show its age IMHO, in the details of the layout in particular. Technology wise it is one, if not the best project out there hands down.
 
 So here you will find a completely refactored PCB design of the KLOR project for 2024 including :
