@@ -32,9 +32,12 @@
 -  You can choose to mount the reset switch, power switch and TRRS jack either side of the PCB. I think it is better to put them all on the upper side along with the rotary encoders, but the circuit is symetrical so they will work whatever side you choose. Most cases account for an upper side mount so just check with your case design. Stencils will provide openings to put paste on either sides so obviously use them (or not) as required.
 
 # FIRMWARE
-My version of ZMK firmware is located here:
+My version of ZMK firmware  with Github Actions pipeline is located here:
 https://github.com/Lefuneste83/zmk-config-klor
-It has both encoders working, precise pulse per rotation adjustments and RGB enabled by default
+It has both encoders working, precise pulse per rotation adjustments and RGB enabled by default.
+
+Config files for both QMK and ZMK can be found here:
+https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE
 
 ## CONTEXT
 I have just completed my build of the 1.3 and found it a bit frustrating to assemble, despite my 13 year experience with this kind of project. Don't get me wrong the KLOR project is absolutely marvelous, but the PCB design starts to show its age IMHO, in the details of the layout in particular. Technology wise it is one, if not the best project out there hands down.
