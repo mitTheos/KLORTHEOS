@@ -1,6 +1,9 @@
 # Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4)
 
 # CHANGELOG
+23/08/2024
+-  Upddated FIRMWARE directory with working config files for QMK for RP2040 and ZMK for NiceNanoV2. These are not perfect but both firmware compile without errors and have the maximum functionalities enabled by default.
+
 09/08/2024
 - Correction of a 0.45 mm interference between hot swap socket and bottom of haptic buzz module. The module has been moved upwards by 0.6 mm to clear the interference for those willing to install the stock haptic module.
 - An alternative design for a DIY haptic module is included if you can get a DRV2605LDGSR driver chip and a ELV1411A linear motor. Hot air/plate soldering is required. This module is 0.8 mm shorter so there will definitely be no interference whatever version of PCB you have. Attachment hole placment is unchanged relative to motor and pins locations in order to preserve mechanical compatibility. I recommend a thinner PCB (1.2 mm) for this module. I am in the process of validating this module design so use it at you own risk or wait a few days until I have validated it!
