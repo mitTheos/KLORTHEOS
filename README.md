@@ -3,7 +3,7 @@
 # CHANGELOG
 23/08/2024
 -  Upddated FIRMWARE directory with working config files for QMK for RP2040 and ZMK for NiceNanoV2. These are not perfect but both firmware compile without errors and have the maximum functionalities enabled by default.
--  Added link for a full po;ydactyl layout on the layout editor website
+-  Added link for a full polydactyl layout on the layout editor website
 
 09/08/2024
 - Correction of a 0.45 mm interference between hot swap socket and bottom of haptic buzz module. The module has been moved upwards by 0.6 mm to clear the interference for those willing to install the stock haptic module.
