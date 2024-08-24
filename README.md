@@ -39,6 +39,9 @@ It has both encoders working, precise pulse per rotation adjustments and RGB ena
 Config files for both QMK and ZMK can be found here:
 https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE
 
+For extra convienence if you intend to modify your firmware for a smaller layout, I have created a link to a polydactyl layout on the layout editor website:
+http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a
+
 # CONTEXT
 I have just completed my build of the 1.3 and found it a bit frustrating to assemble, despite my 13 year experience with this kind of project. Don't get me wrong the KLOR project is absolutely marvelous, but the PCB design starts to show its age IMHO, in the details of the layout in particular. Technology wise it is one, if not the best project out there hands down.
 
