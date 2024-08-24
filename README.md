@@ -3,6 +3,7 @@
 # CHANGELOG
 23/08/2024
 -  Upddated FIRMWARE directory with working config files for QMK for RP2040 and ZMK for NiceNanoV2. These are not perfect but both firmware compile without errors and have the maximum functionalities enabled by default.
+-  Added link for a full po;ydactyl layout on the layout editor website
 
 09/08/2024
 - Correction of a 0.45 mm interference between hot swap socket and bottom of haptic buzz module. The module has been moved upwards by 0.6 mm to clear the interference for those willing to install the stock haptic module.
@@ -39,8 +40,7 @@ It has both encoders working, precise pulse per rotation adjustments and RGB ena
 Config files for both QMK and ZMK can be found here:
 https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE
 
-For extra convienence if you intend to modify your firmware for a smaller layout, I have created a link to a polydactyl layout on the layout editor website:
-http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a
+For extra convienence if you intend to modify your firmware for a smaller layout, I have created a link to a [polydactyl layout](http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a) on the layout editor website.
 
 # CONTEXT
 I have just completed my build of the 1.3 and found it a bit frustrating to assemble, despite my 13 year experience with this kind of project. Don't get me wrong the KLOR project is absolutely marvelous, but the PCB design starts to show its age IMHO, in the details of the layout in particular. Technology wise it is one, if not the best project out there hands down.
