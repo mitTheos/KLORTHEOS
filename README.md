@@ -3,6 +3,7 @@
 # CHANGELOG
 23/08/2024
 -  Upddated FIRMWARE directory with working config files for QMK for RP2040 and ZMK for NiceNanoV2. These are not perfect but both firmware compile without errors and have the maximum functionalities enabled by default.
+-  Added precompiled qmk and zmk firmware
 -  Added link for a full polydactyl layout on the layout editor website
 
 09/08/2024
