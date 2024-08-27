@@ -1,6 +1,16 @@
-# Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4)
+# Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4 & 1.4 LP KS33)
 
 # CHANGELOG
+27/08/2024
+-  Did some minimal tracks cleanup on all versions with Kicad cleanup tools. It was mainly some unmerged tracks.
+-  Moved all files to Kicad 8 version. Please upgrade your version if required.
+-  At the request of some users of the community I have made an initial "special" low profile version for KS33/V2 Gateron switches with south facing LED. Beware that this version is untested yet in terms of production validation. It will most likely be fabricated by JLCPB as it clears DRC, but I haven't assembled one yet. Also keep in mind the following points :
+
+    - There will be some interferences with the haptic module as there is no way I can move it up sufficiently on the existing PCB cutout. I would have to redesign the top corner which would impact enclosure compatibility. Haptic module can be mounted but it will have to be a little bit spaced from the back of the PCB to clear the switch socket.
+    - I have moved the puck mounting holes up a little bit. It now sits in between the 1.3 and 1.4 positions
+    - Because the KS33 hotswaps have a very diferent pinout compared with standard Cherry, they don't play as well with the recto-verso design of the KLOR. In particular you may find to lack a little bit of soldering surface on the right pad. It should be just enough to solder the pad. This is due to the pad interfering with the other side hole. Nothing I can do here apart from duplicating the design for right and left sides.
+    - Obviously you will need some Gateron low profile V2 hotswap sockets for this version (compatible with Gateron KS33/V2 low profile type switches). These are easilly obtainable on Aliexpress I use them for another project.Only Gateron low profile V2 sockets can be used. No other brands which differs from the main 1.4 version which accepts other brands as Cherry (non low profile) footprint is standard.
+
 23/08/2024
 -  Upddated FIRMWARE directory with working config files for QMK for RP2040 and ZMK for NiceNanoV2. These are not perfect but both firmware compile without errors and have the maximum functionalities enabled by default.
 -  Added precompiled [qmk](https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE/Ready-to-flash/qmk-RP2040) and [zmk](https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE/Ready-to-flash/zmk-NiceNanoV2) firmware
@@ -22,10 +32,10 @@
 
 --> If you intend to generate your own gerbers instead of the ones provided, make sure to process drill files AND flag the "Substract soldermask layer from copper pads" option (otherwise the KLOR Logo will superimpose on some of the SMD pads rendering soldering impossible without manual scratching of the covered pads). Guess how I know...
 
-# FABRICATION NOTES
+# FABRICATION NOTES FOR MAIN 1.4 VERSION
 -  Compared with 1.3 design you only need different LED modules (SK6812 Mini-E instead of WS2812 3535). Beware that this PCB uses the most common SK6812 Mini-E package, but there are many variants around including reversed wired one or similar packages with non addressable RGB. In doubt check the wiring in Kicad. If ordering on Aliexpress you should generaly be safe when looking for this part but always double check the pinout.
 -  Beware that Gateron hot swappable sockets must be oriented properly with their rounded edge against the central hole. If mounted upside down you won't be able to insert the switch. Kailh sockets don't have the same symetry in their shape so no risk to mount them upside down.
--  Be careful when selecting your hot swappable sockets as all brands have normal and low profile options with different pin placements. You can only use normal sockets on this design. If there is some interest I may produce a low profile south facing version eventually.
+-  Be careful when selecting your hot swappable sockets as all brands have normal and low profile options with different pin placements. You can only use normal sockets on the main 1.4 version. There is also a low profile version for Gateron KS33/V2 low profile switches that I haven't assembled yet. Use with caution!
 -  I recommend you stick with recommended diodes 1N4148W in SOD123 package. Too small diodes can be a pain to orientate properly without proper magnification
 -  Choose your MCU wisely: for wireless connectivity, Nice Nano V2 is fine and kind of the only option at this moment. But you'll loose some functionalities such as speaker, haptic feedback and less display used for logos. On the bright side I can confirm that both encoders do work flawlessly with recent versions of ZMK. When you wish to make the extra steps, ZMK firmware is a bit tricky to setup properly, but with some time you may be able to implement what you want. Keep in mind that the current official Firmware is based on an older ZMK codebase and some significant changes have happened recently, in terms of syntax, making it almost mandatory to do some changes in the original config and devicetree files (for instance in order to have precise pulses per rotation for each encoder or to enable RGB)
 -  For wired builds I would go with RP2040 Pro Micro boards as it seems very compatible with QMK and much more powerful compared with ATMega32U4 MCU wich is a bit outdated now, but it offers the most support by far. Also I have recently ventured deeper into QMK and it appears that when using their latest toolchain and build definitions, the Atmega cannot hold all functionalities in its memory. So you'll definitely need to go the RP2040 route for a full set of specs. QMK is very good IMHO apart from not having proper wireless options which is a real bummer... It is also in the middle of a heavy transformation in its file structure (migration to a single keyboard.json for all metadata) and the provided stock firmware which is several year old will hardly compile at all against the latest QMK code base. So at the moment the easiest route is to flash the already compiled firmware or try ZMK.
