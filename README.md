@@ -1,6 +1,6 @@
 # Welcome to my take on the great KLOR Split Keyboard Project (That is Rev 1.4 & 1.4 LP KS33)
 
-[# CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
+# [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
 
 # FABRICATION NOTES FOR MAIN 1.4 VERSION
 -  Compared with 1.3 design you only need different LED modules (SK6812 Mini-E instead of WS2812 3535). Beware that this PCB uses the most common SK6812 Mini-E package, but there are many variants around including reversed wired one or similar packages with non addressable RGB. In doubt check the wiring in Kicad. If ordering on Aliexpress you should generaly be safe when looking for this part but always double check the pinout.
