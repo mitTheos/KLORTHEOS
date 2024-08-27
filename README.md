@@ -1,5 +1,6 @@
 # Welcome to my take on the great KLOR Split Keyboard Project
 Here you'll find an up do date version of KLOR PCB and firmware files for Rev 1.4 for full height Cherry switches and a Rev 1.4 LP KS33 version for low profile KS33 Gateron switches.
+
 If you intend to build a KLOR keyboard from this repo please take the time to read the different sections below.
 
 ![KLOR layouts](/docs/images/Klor_1.4_picture6.jpg)
