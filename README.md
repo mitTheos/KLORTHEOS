@@ -2,19 +2,13 @@
 Here you'll find an up do date version of KLOR PCB and firmware files for Rev 1.4 for full height Cherry switches and a Rev 1.4 LP KS33 version for low profile KS33 Gateron switches.
 If you intend to build a KLOR keyboard from this repo please take the time to read the different sections below.
 
+![KLOR layouts](/docs/images/Klor_1.4_picture6.jpg)
+
 # [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
 
 # [FABRICATION NOTES FOR MAIN 1.4 VERSION](https://github.com/Lefuneste83/KLOR/blob/main/FABNOTES.md)
 
-# FIRMWARE
-My version of ZMK firmware  with Github Actions pipeline is located here:
-https://github.com/Lefuneste83/zmk-config-klor
-It has both encoders working, precise pulse per rotation adjustments and RGB enabled by default.
-
-Config files for both QMK and ZMK can be found here:
-https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE
-
-For extra convienence if you intend to modify your firmware for a smaller layout, I have created a link to a [polydactyl layout](http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a) on the layout editor website.
+# [FIRMWARE](https://github.com/Lefuneste83/KLOR/blob/main/FIRMWARE.md)
 
 # CONTEXT
 I have just completed my build of the 1.3 and found it a bit frustrating to assemble, despite my 13 year experience with this kind of project. Don't get me wrong the KLOR project is absolutely marvelous, but the PCB design starts to show its age IMHO, in the details of the layout in particular. Technology wise it is one, if not the best project out there hands down.
@@ -67,7 +61,6 @@ KLOR is a 36-42 key column-staggered split keyboard. It supports a per-key RGB m
 
 ## RENDERING OF THIS FORK (Rev 1.4)
 
-![KLOR layouts](/docs/images/Klor_1.4_picture6.jpg)
 ![KLOR layouts](/docs/images/Klor_1.4_picture4.png)
 ![KLOR layouts](/docs/images/Klor_1.4_picture5.png)
 ![KLOR layouts](/docs/images/Klor_1.4_picture1.png)
@@ -79,24 +72,6 @@ KLOR is a 36-42 key column-staggered split keyboard. It supports a per-key RGB m
 ## LAYOUTS
 
 ![KLOR layouts](/docs/images/klor-layouts.svg)
-
-***
-
-## IMAGES
-
-![KLOR polydactyl](/docs/images/KLOR_polydactyl_DES01.jpg)
-
-![KLOR polydactyl](/docs/images/KLOR_polydactyl_DES02.jpg)
-
-▲ KLOR polydactyl with 3DP case and DES keycaps.
-
-***
-
-![KLOR saegewerk](/docs/images/KLOR_saegewerk_GRID01.jpg)
-
-![KLOR saegewerk](/docs/images/KLOR_saegewerk_GRID02.jpg)
-
-▲ KLOR saegewerk with stacked acrylic case and GRID keycaps.
 
 ***
 
