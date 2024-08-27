@@ -1,5 +1,6 @@
 # CHANGELOG
 27/08/2024
+-  Validation of the alternative haptic module. You may now add it to your existing board. It is working great
 -  Did some minimal tracks cleanup on all versions with Kicad cleanup tools. It was mainly some unmerged tracks.
 -  Moved all files to Kicad 8 version. Please upgrade your version if required.
 -  At the request of some users of the community I have made an initial "special" low profile version for KS33/V2 Gateron switches with south facing LED. Beware that this version is untested yet in terms of production validation. It will most likely be fabricated by JLCPB as it clears DRC, but I haven't assembled one yet. Also keep in mind the following points :
@@ -16,7 +17,7 @@
 
 09/08/2024
 - Correction of a 0.45 mm interference between hot swap socket and bottom of haptic buzz module. The module has been moved upwards by 0.6 mm to clear the interference for those willing to install the stock haptic module.
-- An alternative design for a DIY haptic module is included if you can get a DRV2605LDGSR driver chip and a ELV1411A linear motor. Hot air/plate soldering is required. This module is 0.8 mm shorter so there will definitely be no interference whatever version of PCB you have. Attachment hole placment is unchanged relative to motor and pins locations in order to preserve mechanical compatibility. I recommend a thinner PCB (1.2 mm) for this module. I am in the process of validating this module design so use it at you own risk or wait a few days until I have validated it!
+- An alternative design for a DIY haptic module is included if you can get a DRV2605LDGSR driver chip and a ELV1411A linear motor. Hot air/plate soldering is required. This module is 0.8 mm shorter so there will definitely be no interference whatever version of PCB you have. Attachment hole placment is unchanged relative to motor and pins locations in order to preserve mechanical compatibility. I recommend a thinner PCB (1.2 mm) for this module.
 
 07/08/2024
 -  Production validation of the new design. Full build completed and tested. Current Paste Layers are functionnal for those willing to order stencils.
