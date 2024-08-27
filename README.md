@@ -44,7 +44,7 @@ So here you will find a completely refactored PCB design of the KLOR project for
 
   I have also included files for a working 1.3 design which passes the JLCPCB fabrication and is working as a real world product (REV 1.3)
   
-
+***
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/docs/images/klor-font-logo-dark.svg">
@@ -106,15 +106,6 @@ Here you can find the build guides for the KLOR.\
 [KLOR build guide stacked acrylic case](/docs/buildguide_acrylic.md) (QMK)\
 [KLOR BLE build guide 3DP case](/docs/buildguide_3DP_ble.md) (ZMK)\
 [KLOR BLE build guide stacked acrylic case](/docs/buildguide_acrylic_ble.md) (ZMK)
-
-***
-
-## FIRMWARE
-
-[QMK config](https://github.com/GEIGEIGEIST/qmk-config-klor) (supports OLED, encoders, LEDs, haptic feedback and speakers)\
-[ZMK config](https://github.com/GEIGEIGEIST/zmk-config-klor) (supports OLED, encoder, LEDs and Bluetooth)\
-[KMK config](https://github.com/moritz-john/kmk-config-klor) (supports OLED, encoders, LEDs and speakers) made by [Moritz John](https://github.com/moritz-john)\
-Thanks to [Manna Harbour](https://github.com/manna-harbour) you can find KLOR in [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk)
 
 ***
 
