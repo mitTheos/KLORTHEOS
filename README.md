@@ -7,7 +7,7 @@ If you intend to build a KLOR keyboard from this repo please take the time to re
 
 ### [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
 
-### [PCB FOR FULL HEIGHTH SWITCHES (REV 1.4)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_4)
+### [PCB FOR FULL HEIGHT SWITCHES (REV 1.4)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_4)
 
 ### [FABRICATION NOTES (FOR REV 1.4)](https://github.com/Lefuneste83/KLOR/blob/main/FABNOTES.md)
 
@@ -15,7 +15,7 @@ If you intend to build a KLOR keyboard from this repo please take the time to re
 
 ### [PCB FOR ALTERNATIVE HAPTIC MODULE](https://github.com/Lefuneste83/KLOR/tree/main/PCB/Alternate%20DIY%20Haptic%20Module)
 
-### [PCB FOR FULL HEIGHTH SWITCHES CORRECTED STOCK VERSION (REV 1.3)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_3)
+### [PCB FOR FULL HEIGHT SWITCHES CORRECTED STOCK VERSION (REV 1.3)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_3)
 
 ### [FIRMWARE](https://github.com/Lefuneste83/KLOR/blob/main/FIRMWARE.md)
 
