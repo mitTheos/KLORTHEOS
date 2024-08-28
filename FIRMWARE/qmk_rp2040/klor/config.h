@@ -17,11 +17,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#undef RP_I2C_USE_I2C1
 #define RP_I2C_USE_I2C1 TRUE
 #define I2C1_SCL_PIN GP3
 #define I2C1_SDA_PIN GP2
-#undef RP_I2C_USE_I2C1
-#define RP_I2C_USE_I2C1 TRUE
 
 #undef RP_PWM_USE_PWM4
 #define RP_PWM_USE_PWM4 TRUE
@@ -50,12 +49,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // └─────────────────────────────────────────────────┘ 
 
 #define USE_SERIAL
-//#define SOFT_SERIAL_PIN GP1
 #define SERIAL_USE_MULTI_TRANSACTION
-//#define SPLIT_LAYER_STATE_ENABLE
-//#define SPLIT_USB_DETECT
+#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_USB_DETECT
 
+//Use this is your RX/TX is mirrored between your two boards
+//#define SERIAL_USART_TX_PIN GP1     // USART TX pin
 
+//Use this is your RX/TX is properly crossed between your two boards (commit from 28/08/2024)
+#define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
+#define SERIAL_USART_TX_PIN GP1     // USART TX pin
+#define SERIAL_USART_RX_PIN GP4     // USART RX pin
 // ┌─────────────────────────────────────────────────┐
 // │ e n c o d e r s                                 │
 // └─────────────────────────────────────────────────┘ 
@@ -137,6 +141,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define V_RMS 2.0 
 #    define F_LRA 150 // resonance freq 
 #    define DRV_GREETING       alert_750ms
+#    define SPLIT_HAPTIC_ENABLE
 #endif
 
 

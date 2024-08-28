@@ -101,3 +101,5 @@ for more options.
 #define BOOTMAGIC_COLUMN 1
 #define BOOTMAGIC_ROW_RIGHT 4
 #define BOOTMAGIC_COLUMN_RIGHT 1
+
+#    define SPLIT_HAPTIC_ENABLE

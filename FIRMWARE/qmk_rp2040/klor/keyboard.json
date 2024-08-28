@@ -159,11 +159,14 @@
             }
         },
 
-        "soft_serial_pin": "GP1",
         "transport": {
             "sync": {
                 "oled": true,
-                "matrix_state": true
+                "matrix_state": true,
+                "layer_state": true,
+                "indicators": true,
+                "modifiers": true,
+                "haptic": true
             }
         }
     },

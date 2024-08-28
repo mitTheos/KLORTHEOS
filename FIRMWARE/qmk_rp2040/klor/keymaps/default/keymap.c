@@ -22,6 +22,7 @@
 #include "klor.h"
 #ifdef HAPTIC_ENABLE
 #include "drivers/haptic/drv2605l.h"
+
 #endif //HAPTIC ENABLE
 
 
@@ -112,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [_QWERTY] = LAYOUT_polydactyl(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
                  KC_Q,    KC_W,    KC_E,     KC_R,      KC_T,                          KC_Y,    KC_U,      KC_I,     KC_O,    KC_P,
-        KC_TAB,  KC_A,    KC_S,    KC_D,   LSFT_T(KC_F),KC_G,                          KC_H, RSFT_T(KC_J), KC_K,     KC_L,    KC_SCLN,  KC_QUOT,
+LSFT_T(KC_TAB),  KC_A,    KC_S,    KC_D,   LSFT_T(KC_F),KC_G,                          KC_H, RSFT_T(KC_J), KC_K,     KC_L,    KC_SCLN,  KC_QUOT,
         KC_LCTL, KC_Z,    KC_X,    KC_C,     KC_V,      KC_B,     KC_MUTE,   KC_MPLY,  KC_N,    KC_M,      KC_COMM,  KC_DOT,  KC_SLSH,  KC_BSLS,
                                    KC_LALT,  LOWER,     KC_RALT,  KC_SPC,    KC_BSPC,  KC_ENT,  RAISE,     KC_DEL
  ),
@@ -676,6 +677,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case LOWER:
             if (record->event.pressed) {
                 layer_on(_LOWER);
+                #ifdef HAPTIC_ENABLE
+                  drv2605l_pulse(17);
+                #endif // HAPTIC_ENABLE
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             } else {
                 layer_off(_LOWER);
@@ -685,6 +689,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case RAISE:
             if (record->event.pressed) {
                 layer_on(_RAISE);
+                #ifdef HAPTIC_ENABLE
+                  drv2605l_pulse(17);
+                #endif // HAPTIC_ENABLE
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             } else {
                 layer_off(_RAISE);
@@ -694,6 +701,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case ADJUST:
             if (record->event.pressed) {
                 layer_on(_ADJUST);
+                #ifdef HAPTIC_ENABLE
+                  drv2605l_pulse(17);
+                #endif // HAPTIC_ENABLE
             } else {
                 layer_off(_ADJUST);
             }
@@ -793,16 +803,22 @@ enum combos {
   QW_ESC,
   WE_CLOSETAB,
   ER_LASTTAB,
+  RT_PRTSCR,
+  WR_TERMINAL,
 };
 
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM rt_combo[] = {KC_R, KC_T, COMBO_END};
+const uint16_t PROGMEM wr_combo[] = {KC_W, KC_R, COMBO_END};
 
 combo_t key_combos[] = {
   [QW_ESC] = COMBO(qw_combo, KC_ESC),
   [WE_CLOSETAB] = COMBO(we_combo, LCTL(KC_F4)),
   [ER_LASTTAB] = COMBO(er_combo, LCTL(LSFT(KC_T))),
+  [RT_PRTSCR] = COMBO(rt_combo, KC_PSCR),
+  [WR_TERMINAL] = COMBO(wr_combo, LCTL(LALT(KC_T))),
 };
 
 #endif // COMBO_ENABLE
