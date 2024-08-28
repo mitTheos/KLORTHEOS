@@ -26,7 +26,7 @@
         "encoder": true,
         "extrakey": true,
         "haptic": true,
-        "mousekey": true,
+        "mousekey": false,
         "oled": true,
         "pointing_device": false,
         "rgb_matrix": true,

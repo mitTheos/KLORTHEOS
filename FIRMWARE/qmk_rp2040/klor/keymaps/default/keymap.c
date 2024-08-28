@@ -22,7 +22,6 @@
 #include "klor.h"
 #ifdef HAPTIC_ENABLE
 #include "drivers/haptic/drv2605l.h"
-
 #endif //HAPTIC ENABLE
 
 
@@ -159,9 +158,9 @@ LSFT_T(KC_TAB),  KC_A,    KC_S,    KC_D,   LSFT_T(KC_F),KC_G,                   
 
    [_RAISE] = LAYOUT_polydactyl(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-               RGB_SPI,  RGB_HUI,  KC_TRNS,  KC_TRNS,  KC_LCBR,                       KC_RCBR,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_HOME,
-     RGB_VAI,  RGB_MOD,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_LBRC,                       KC_RBRC,  KC_TRNS,  KC_DOWN,  KC_TRNS,  KC_PSCR,  KC_PGUP,
-     RGB_VAD,  RGB_SPD,  RGB_HUD,  KC_TRNS,  KC_TRNS,  KC_LPRN,  KC_MUTE,   KC_MPLY,  KC_RPRN,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_END,   KC_PGDN,
+               RGB_SPI,  RGB_HUI,  HF_NEXT,  KC_TRNS,  KC_LCBR,                       KC_RCBR,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_HOME,
+     RGB_VAI,  RGB_MOD,  KC_TRNS,  HF_TOGG,  KC_TRNS,  KC_LBRC,                       KC_RBRC,  KC_TRNS,  KC_DOWN,  KC_TRNS,  KC_PSCR,  KC_PGUP,
+     RGB_VAD,  RGB_SPD,  RGB_HUD,  HF_PREV,  KC_TRNS,  KC_LPRN,  KC_MUTE,   KC_MPLY,  KC_RPRN,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_END,   KC_PGDN,
                                    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_LSFT,   KC_RSFT,  KC_TRNS,  KC_TRNS,  ADJUST
  ),
  /*
@@ -291,13 +290,12 @@ LSFT_T(KC_TAB),  KC_A,    KC_S,    KC_D,   LSFT_T(KC_F),KC_G,                   
 // └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 // ▝▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▘
 
-void keyboard_post_init_user(void) {
-  // Call the post init code.
-  #if HAPTIC_ENABLE
-    haptic_disable(); // disables per key haptic feedback by default
-  #endif //HAPTIC ENABLE
-}
-
+//void keyboard_post_init_user(void) {
+//  // Call the post init code.
+//  #if HAPTIC_ENABLE
+//    haptic_disable(); // disables per key haptic feedback by default
+//  #endif //HAPTIC ENABLE
+//}
 
 // ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 // │ O L E D                                                                                                                                    │
@@ -654,9 +652,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     PLAY_SONG(winxp_song);
                   #endif // AUDIO_ENABLE        
                 }
-              #ifdef HAPTIC_ENABLE
-                drv2605l_pulse(52);
-              #endif // HAPTIC_ENABLE
+//              #ifdef HAPTIC_ENABLE
+//                drv2605l_pulse(52);
+//              #endif // HAPTIC_ENABLE
             eeconfig_update_keymap(keymap_config.raw);
             clear_keyboard();  // ──── clear to prevent stuck keys    
             return false;
@@ -669,17 +667,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case QWERTY:
             if (record->event.pressed) {
                 set_single_persistent_default_layer(_QWERTY);
-                #ifdef HAPTIC_ENABLE
-                  drv2605l_pulse(64);
-                #endif // HAPTIC_ENABLE
+//                #ifdef HAPTIC_ENABLE
+//                  drv2605l_pulse(64);
+//                #endif // HAPTIC_ENABLE
             }
             return false;
         case LOWER:
             if (record->event.pressed) {
                 layer_on(_LOWER);
-                #ifdef HAPTIC_ENABLE
-                  drv2605l_pulse(17);
-                #endif // HAPTIC_ENABLE
+//                #ifdef HAPTIC_ENABLE
+//                  drv2605l_pulse(17);
+//                #endif // HAPTIC_ENABLE
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             } else {
                 layer_off(_LOWER);
@@ -689,9 +687,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case RAISE:
             if (record->event.pressed) {
                 layer_on(_RAISE);
-                #ifdef HAPTIC_ENABLE
-                  drv2605l_pulse(17);
-                #endif // HAPTIC_ENABLE
+//                #ifdef HAPTIC_ENABLE
+//                  drv2605l_pulse(17);
+//                #endif // HAPTIC_ENABLE
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             } else {
                 layer_off(_RAISE);
@@ -701,9 +699,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case ADJUST:
             if (record->event.pressed) {
                 layer_on(_ADJUST);
-                #ifdef HAPTIC_ENABLE
-                  drv2605l_pulse(17);
-                #endif // HAPTIC_ENABLE
+//                #ifdef HAPTIC_ENABLE
+//                  drv2605l_pulse(17);
+//                #endif // HAPTIC_ENABLE
             } else {
                 layer_off(_ADJUST);
             }
@@ -730,9 +728,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
       case KC_MPLY:
         if (record->event.pressed) {
-          #ifdef HAPTIC_ENABLE
-                  drv2605l_pulse(4);
-          #endif // HAPTIC_ENABL
+//          #ifdef HAPTIC_ENABLE
+//                  drv2605l_pulse(4);
+//          #endif // HAPTIC_ENABLE
         }
         break;
     }
