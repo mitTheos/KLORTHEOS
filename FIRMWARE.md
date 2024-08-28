@@ -22,4 +22,4 @@ Older commits of the 1.4 version can use the following to enable half duplex ser
                  #define SERIAL_USART_TX_PIN GP1     // USART TX pin
 I have differentiated the uf2 firmware images. This does not impact ZMK which uses BLE for split keyboards communication.
 
-More about this matter here
+More about this matter [here](https://docs.qmk.fm/drivers/serial)
