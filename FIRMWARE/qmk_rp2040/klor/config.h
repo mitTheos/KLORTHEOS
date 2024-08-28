@@ -28,9 +28,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef RP_PWM_USE_TIM1
 #define RP_PWM_USE_TIM1 TRUE
 
-#define HAL_USE_I2C TRUE
+//#undef HAL_USE_I2C
+//#define HAL_USE_I2C TRUE
+
+#undef HAL_USE_PWM
 #define HAL_USE_PWM TRUE
-#define HAL_USE_PAL TRUE
+
+//#undef HAL_USE_PAL
+//#define HAL_USE_PAL TRUE
 
 // ┌─────────────────────────────────────────────────┐
 // │ k e y   m a t r i x                             │
@@ -54,12 +59,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_USB_DETECT
 
 //Use this is your RX/TX is mirrored between your two boards
-//#define SERIAL_USART_TX_PIN GP1     // USART TX pin
+#define SERIAL_USART_TX_PIN GP1     // USART TX pin
 
 //Use this is your RX/TX is properly crossed between your two boards (commit from 28/08/2024)
-#define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
-#define SERIAL_USART_TX_PIN GP1     // USART TX pin
-#define SERIAL_USART_RX_PIN GP4     // USART RX pin
+//#define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
+//#define SERIAL_USART_TX_PIN GP1     // USART TX pin
+//#define SERIAL_USART_RX_PIN GP4     // USART RX pin
+
 // ┌─────────────────────────────────────────────────┐
 // │ e n c o d e r s                                 │
 // └─────────────────────────────────────────────────┘ 

@@ -161,6 +161,8 @@
 
         "transport": {
             "sync": {
+                "activity": true,
+                "detected_os": true,
                 "oled": true,
                 "matrix_state": true,
                 "layer_state": true,
