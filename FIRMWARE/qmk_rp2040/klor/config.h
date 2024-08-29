@@ -55,7 +55,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define USE_SERIAL
 #define SERIAL_USE_MULTI_TRANSACTION
-#define SPLIT_LAYER_STATE_ENABLE
 #define SPLIT_USB_DETECT
 
 //Use this is your RX/TX is mirrored between your two boards

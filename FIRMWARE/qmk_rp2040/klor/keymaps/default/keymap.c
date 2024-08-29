@@ -158,9 +158,9 @@ LSFT_T(KC_TAB),  KC_A,    KC_S,    KC_D,   LSFT_T(KC_F),KC_G,                   
 
    [_RAISE] = LAYOUT_polydactyl(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-               RGB_SPI,  RGB_HUI,  HF_NEXT,  KC_TRNS,  KC_LCBR,                       KC_RCBR,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_HOME,
-     RGB_VAI,  RGB_MOD,  KC_TRNS,  HF_TOGG,  KC_TRNS,  KC_LBRC,                       KC_RBRC,  KC_TRNS,  KC_DOWN,  KC_TRNS,  KC_PSCR,  KC_PGUP,
-     RGB_VAD,  RGB_SPD,  RGB_HUD,  HF_PREV,  KC_TRNS,  KC_LPRN,  KC_MUTE,   KC_MPLY,  KC_RPRN,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_END,   KC_PGDN,
+               RGB_SPI,  RGB_HUI,  HF_NEXT,  CK_UP,    KC_LCBR,                       KC_RCBR,  KC_LEFT,  KC_UP,    KC_RGHT,  KC_HOME,
+     RGB_VAI,  RGB_MOD,  RGB_M_B,  HF_TOGG,  CK_TOGG,  KC_LBRC,                       KC_RBRC,  KC_TRNS,  KC_DOWN,  KC_TRNS,  KC_PSCR,  KC_PGUP,
+     RGB_VAD,  RGB_SPD,  RGB_HUD,  HF_PREV,  CK_DOWN,  KC_LPRN,  KC_MUTE,   KC_MPLY,  KC_RPRN,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_END,   KC_PGDN,
                                    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_LSFT,   KC_RSFT,  KC_TRNS,  KC_TRNS,  ADJUST
  ),
  /*
