@@ -5,7 +5,7 @@ If you intend to build a KLOR keyboard from this repo please take the time to re
 
 ![KLOR layouts](/docs/images/Klor_1.4_picture6.jpg)
 
-### [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md) ---> BREAKING CHANGE ON THE MINIJACK WIRING 28/08/2024
+### [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
 
 ### [PCB FOR FULL HEIGHT SWITCHES (REV 1.4)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_4)
 
