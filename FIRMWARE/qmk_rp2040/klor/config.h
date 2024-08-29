@@ -57,13 +57,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SERIAL_USE_MULTI_TRANSACTION
 #define SPLIT_USB_DETECT
 
-//Use this is your RX/TX is mirrored between your two boards
-#define SERIAL_USART_TX_PIN GP1     // USART TX pin
+//Half Duplex communication
+//#define SERIAL_USART_TX_PIN GP4     // USART TX pin
 
-//Use this is your RX/TX is properly crossed between your two boards (commit from 28/08/2024)
-//#define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
-//#define SERIAL_USART_TX_PIN GP1     // USART TX pin
-//#define SERIAL_USART_RX_PIN GP4     // USART RX pin
+//Full Duplex communication
+#define SERIAL_USART_TX_PIN GP4     // USART TX pin
+#define SERIAL_USART_RX_PIN GP1     // USART RX pin
+#define SERIAL_USART_FULL_DUPLEX
+#define SERIAL_USART_PIN_SWAP
 
 // ┌─────────────────────────────────────────────────┐
 // │ e n c o d e r s                                 │

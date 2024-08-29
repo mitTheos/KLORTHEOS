@@ -369,10 +369,14 @@ void matrix_scan_user(void) {
 
 void render_os_lock_status(void) {
     static const char PROGMEM sep_v[] = {0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0};
-    static const char PROGMEM sep_h1[] = {0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0};
+    static const char PROGMEM sep_h1[] = {0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0};
+//    static const char PROGMEM sep_h1[] = {0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0};
     static const char PROGMEM sep_h2[] = {0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0xE1, 0};
-    static const char PROGMEM face_1[] = {0x80, 0x81, 0x82, 0x83, 0x84, 0xE1, 0};  
-    static const char PROGMEM face_2[] = {0xA0, 0xA1, 0xA2, 0xA3, 0xA4, 0xE1, 0}; 
+    static const char PROGMEM face_1[] = {0x85, 0x86, 0x87, 0x88, 0x89, 0x8A, 0x8B, 0x8C, 0x8D, 0x8E, 0xE1, 0};  
+    static const char PROGMEM face_2[] = {0xA5, 0xA6, 0xA7, 0xA8, 0xA9, 0xAA, 0xAB, 0xAC, 0xAD, 0xAE, 0xE1, 0};
+    static const char PROGMEM face_3[] = {0xE1, 0xE1, 0xC5, 0xC6, 0xC7, 0xC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xE1, 0};
+//    static const char PROGMEM face_1[] = {0x80, 0x81, 0x82, 0x83, 0x84, 0xE1, 0};  
+//    static const char PROGMEM face_2[] = {0xA0, 0xA1, 0xA2, 0xA3, 0xA4, 0xE1, 0};
     static const char PROGMEM os_m_1[] = {0x95, 0x96, 0};
     static const char PROGMEM os_m_2[] = {0xB5, 0xB6, 0};
     static const char PROGMEM os_w_1[] = {0x97, 0x98, 0};
@@ -387,6 +391,7 @@ void render_os_lock_status(void) {
     #endif
     #ifdef HAPTIC_ENABLE
       static const char PROGMEM hap_en[] = {0xB1, 0xB2, 0};
+      static const char PROGMEM hap_di[] = {0xCF, 0xD0, 0};
     #endif
 
 // os mode status ────────────────────────────────────────┐
@@ -410,7 +415,9 @@ void render_os_lock_status(void) {
 
     oled_write_P(sep_h1, false);
     oled_write_P(face_2, false);
-    oled_write_ln_P(sep_v, false);
+    oled_write_P(sep_h1, false);
+    oled_write_P(face_3, false);
+//    oled_write_ln_P(sep_v, false);
 
     
 // lock key layer status ─────────────────────────────────┐
@@ -446,14 +453,20 @@ void render_os_lock_status(void) {
 
     #ifdef AUDIO_ENABLE // ────────────────── AUDIO
         if (is_audio_on()) { 
-          oled_write_P(aud_en, false); 
+            oled_write_P(aud_en, false); 
         } else {
-          oled_write_P(aud_di, false);
+            oled_write_P(aud_di, false);
         }
     #endif // AUDIO ENABLE
 
      #ifdef HAPTIC_ENABLE // ─────────────── HAPTIC
-        oled_write_P(hap_en, false); 
+//        oled_write_P(hap_en, false);
+        if (haptic_get_enable()) { 
+            oled_write_P(hap_en, false);
+        } else {
+            oled_write_P(hap_di, false);
+        }
+
      #endif // HAPTIC ENABLE
 }
 
