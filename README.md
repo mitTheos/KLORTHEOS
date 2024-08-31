@@ -23,6 +23,7 @@ If you intend to build a KLOR keyboard from this repo please take the time to re
 -  This is as close as it gets to the original design but with some rerouting to allow to pass JLCPCB preproduction validation process. It uses the older style of LED (WS2812 3535) which are very tricky to solder properly, as they are not intended to be mounted this way. I strongly suggest moving to the 1.4 version for a much better build experience and a much more reliable build.
 
 ### [FIRMWARE](https://github.com/Lefuneste83/KLOR/blob/main/FIRMWARE.md)
+-  VIAL support is now working on RP2040 with VIAL-QMK
 -  These are updated QMK and ZMK config files and compiled images. They should have most devices enabled by default and should compile on latest toolchains of ZMK and QMK. A [Github Actions repositiry for ZMK](https://github.com/Lefuneste83/zmk-config-klor) is also available in my other repositories. Keep in mind that I only use ZMK on NRF52840 and QMK on RP2040. I would advise you to do the same as Atmega chips will not support all functionalities of the KLOR keyboard. As a reminder ZMK on NRF52840 will not support audio or haptic yet, but will support OLED to a certain degree and wireless communications with BLE protocol. QMK on RP2040 will support everything except wireless communications.
 
 # CONTEXT

@@ -2,15 +2,34 @@
 31/08/2024
 -  Added support for VIAL firmware for RP2040 boards. You can now compile :
    
-      the "default" layout using [QMK toolchain](https://github.com/qmk/qmk_firmware) and the command "qmk compile -kb klor -km default"
+      the "default" layout using [QMK toolchain](https://github.com/qmk/qmk_firmware) and the command :
+
+            qmk compile -kb klor -km default -c
    
-      or "vial" layout using [vial-qmk toolchain](https://github.com/vial-kb/vial-qmk) and the command "make klor:vial"
+      or "vial" layout using [vial-qmk toolchain](https://github.com/vial-kb/vial-qmk) and the command :
+
+            make clean && make klor:vial
    
 -   NB : In both cases I had to modify the file ./platforms/chibios/boards/QMK_PM2040/configs/mcuconf.h and change the line :
-              #define RP_PWM_USE_PWM4                     FALSE
-              to
-              #define RP_PWM_USE_PWM4                     TRUE
+
+           #define RP_PWM_USE_PWM4                     FALSE
+           to
+           #define RP_PWM_USE_PWM4                     TRUE
     
+-   Also be aware that I have now enabled firmware based handeness definition ([#define EE_HANDS setting](https://docs.qmk.fm/features/split_keyboard)) so you should flash the firmware using the following commands for left and right keyboard sides :
+-   
+   For QMK environment
+    
+             qmk flash -kb klor -km default -c -bl uf2-split-left
+             qmk flash -kb klor -km default -c -bl uf2-split-right
+    
+  For VIAL-QMK environment
+     
+             qmk flash -kb klor -km vial -c -bl uf2-split-left
+             qmk flash -kb klor -km vial -c -bl uf2-split-right
+
+-  Make sure you switch your serial communication to HALF DUPLEX as software pin swap used for full duplex does not seem to work well with firmware based handeness detection. If you alyays want to plug one side of the keyboard then you can set the master side in config.h and switch to full duplex with software pin swap. This will require a little testing but it will work eventually
+
 28/08/2024
 -  While playing with QMK I have noticed that the original 1.3 design carried a wiring flaw on the minijack footprint and PCB traces. The RX/TX are symetrical between the two sides which makes it impossible to define the transmission protocol in QMK as serial full duplex with RP2040 ProMicro boards if you don't specify a pin swap command. By default the stock firmware uses bitbang driver on a single pin which is not optimal and made the use of a TRRS link unnecessary as 3 pins cable would suffice. If you use these boards you should set the following in the config.h for QMK if using RP2040 ProMicro boards.
       
