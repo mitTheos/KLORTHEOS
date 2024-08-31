@@ -3,7 +3,8 @@ Here you'll find an up do date version of KLOR PCB and firmware files for Rev 1.
 
 If you intend to build a KLOR keyboard from this repo please take the time to read the different sections below.
 
-![KLOR layouts](/docs/images/Klor_1.4_picture6.jpg)
+![KLOR](/docs/images/Klor_1.4_picture6.jpg)
+![KLOR](/docs/images/Klor_1.4_picture13.png)
 
 ### [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
 
