@@ -17,6 +17,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+
+// ┌─────────────────────────────────────────────────┐
+// │ p i n   c o n f i g                             │
+// └─────────────────────────────────────────────────┘ 
+
 #undef RP_I2C_USE_I2C1
 #define RP_I2C_USE_I2C1 TRUE
 #define I2C1_SCL_PIN GP3
@@ -58,13 +63,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_USB_DETECT
 
 //Half Duplex communication
-//#define SERIAL_USART_TX_PIN GP4     // USART TX pin
+#define SERIAL_USART_TX_PIN GP1     // USART TX pin
 
 //Full Duplex communication
-#define SERIAL_USART_TX_PIN GP4     // USART TX pin
-#define SERIAL_USART_RX_PIN GP1     // USART RX pin
-#define SERIAL_USART_FULL_DUPLEX
-#define SERIAL_USART_PIN_SWAP
+//#define SERIAL_USART_TX_PIN GP4     // USART TX pin
+//#define SERIAL_USART_RX_PIN GP1     // USART RX pin
+//#define SERIAL_USART_FULL_DUPLEX
+//#define SERIAL_USART_PIN_SWAP
 
 // ┌─────────────────────────────────────────────────┐
 // │ e n c o d e r s                                 │
@@ -99,11 +104,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_LED_COUNT RGBLED_NUM
 
 #ifdef RGB_MATRIX_ENABLE
-#    define SPLIT_TRANSPORT_MIRROR
+#    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_BREATHING
+#    define SPLIT_TRANSPORT_MIRROR true
 #    define DRIVER_LED_TOTAL 42 // Number of LEDs
 #    define RGB_MATRIX_SPLIT { 21, 21 }
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 180
-#    define RGB_MATRIX_STARTUP_HUE 35
+#    define RGB_MATRIX_TIMEOUT 120000
+#    define RGB_MATRIX_SLEEP
+#    define RGB_MATRIX_LED_FLUSH_LIMIT 16
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255
+#    define RGB_MATRIX_STARTUP_HUE 299
+#    define RGB_MATRIX_DEFAULT_ON true
+#    define RGB_MATRIX_DEFAULT_SAT 255
+#    define RGB_MATRIX_DEFAULT_SPD 127
 #    define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED
 #    define RGB_MATRIX_KEYPRESSES
@@ -117,7 +129,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define AUDIO_PWM_DRIVER PWMD4
 #define AUDIO_PWM_CHANNEL RP2040_PWM_CHANNEL_B
 #define AUDIO_STATE_TIMER GPTD4
-
 #define AUDIO_PIN GP9
 #define AUDIO_VOICES
 #define AUDIO_DAC_SAMPLE_MAX 4095U
@@ -130,7 +141,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define GOODBYE_SONG SONG(BYE_SOUND)
 #    define DEFAULT_LAYER_SONGS \
         { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND) }
-
 #endif 
 
 

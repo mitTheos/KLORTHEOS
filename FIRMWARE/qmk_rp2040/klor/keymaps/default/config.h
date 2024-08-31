@@ -13,14 +13,16 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/#pragma once
+*/
+#pragma once
 
 /* The way how "handedness" is decided (which half is which),
 see https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 for more options.
 */
 
-#define MASTER_LEFT
+#define EE_HANDS
+//#define MASTER_LEFT
 // #define MASTER_RIGHT
 
 //#define TAPPING_TERM 170
@@ -40,16 +42,15 @@ for more options.
 //#define NO_ACTION_TAPPING
 //#define NO_MUSIC_MODE
 
-#define COMBO_COUNT 3
-
+#define COMBO_COUNT 25
+//#define VIAL_COMBO_ENTRIES 25
 // RGB matrix support
 #ifdef RGB_MATRIX_ENABLE
-#    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_COLOR
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effect
 
-//#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
+#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
 #    define ENABLE_RGB_MATRIX_SOLID_COLOR
 #    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
 #    define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
@@ -97,13 +98,17 @@ for more options.
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #endif
 
+// Bootmagic support
 #   define BOOTMAGIC_ROW 0
 #   define BOOTMAGIC_COLUMN 1
 #   define BOOTMAGIC_ROW_RIGHT 4
 #   define BOOTMAGIC_COLUMN_RIGHT 1
 
+// Haptic support
+#ifdef HAPTIC_ENABLE
 //#   define NO_HAPTIC_ALPHA
 //#   define NO_HAPTIC_PUNCTUATION
 //#   define NO_HAPTIC_LOCKKEYS
 //#   define NO_HAPTIC_NAV
 //#   define NO_HAPTIC_NUMERIC
+#endif
