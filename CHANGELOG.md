@@ -11,7 +11,7 @@
 -  In case your MCU can only use a single pin for communications, it is recommended to use half duplex serial instead of bitbang.
       
                   //Half Duplex communication
-                  //#define SERIAL_USART_TX_PIN GP4     // USART TX pin
+                  //#define SERIAL_USART_TX_PIN GP1     // USART TX pin
        
 -  More about this matter [here](https://docs.qmk.fm/drivers/serial)
 
