@@ -1,4 +1,16 @@
 # CHANGELOG
+31/08/2024
+-  Added support for VIAL firmware for RP2040 boards. You can now compile :
+   
+      the "default" layout using [QMK toolchain](https://github.com/qmk/qmk_firmware) and the command "qmk compile -kb klor -km default"
+   
+      or "vial" layout using [vial-qmk toolchain](https://github.com/vial-kb/vial-qmk) and the command "make klor:vial"
+   
+-   NB : In both cases I had to modify the file ./platforms/chibios/boards/QMK_PM2040/configs/mcuconf.h and change the line :
+              #define RP_PWM_USE_PWM4                     FALSE
+              to
+              #define RP_PWM_USE_PWM4                     TRUE
+    
 28/08/2024
 -  While playing with QMK I have noticed that the original 1.3 design carried a wiring flaw on the minijack footprint and PCB traces. The RX/TX are symetrical between the two sides which makes it impossible to define the transmission protocol in QMK as serial full duplex with RP2040 ProMicro boards if you don't specify a pin swap command. By default the stock firmware uses bitbang driver on a single pin which is not optimal and made the use of a TRRS link unnecessary as 3 pins cable would suffice. If you use these boards you should set the following in the config.h for QMK if using RP2040 ProMicro boards.
       
