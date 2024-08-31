@@ -8,16 +8,22 @@ If you intend to build a KLOR keyboard from this repo please take the time to re
 ### [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
 
 ### [PCB FOR FULL HEIGHT SWITCHES (REV 1.4)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_4)
+-  This is my original initial design, derived from the 1.3 with lots of upgrades. I have built it and it works great. The south facing LED and the better suited LED packages make this the best choice for a first KORN build. It keeps the overall design of the original in terms of PCB size and modularity. It is designed for MX style full height hotswap sockets. Gateron or Kailh sockets work great and probably other brands as well. This is not compatible with low profile sockets!
 
 ### [FABRICATION NOTES (FOR REV 1.4)](https://github.com/Lefuneste83/KLOR/blob/main/FABNOTES.md)
+- These are my recommendations for first time builders of the KLOR keyboard. I suggest to have a read as they explain most tricky points that I have encountered while building mine.
 
 ### [PCB FOR LOW PROFILE GATERON KS33 SWITCHES (BETA VERSION REV 1.4 LP KS33)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_4_LP_KS33)
+-  This is a beta version derived from the 1.4 using low profile Gateron hotswap sockets for KS33 switches. It is a beta version so it will see lots of updates in the coming days. Don't rush to have it made except if you want to test it. In particular the haptic module will most likely interfere with the sockets and will require some filing of the haptic PCB. So it is not perfect yet.
 
 ### [PCB FOR ALTERNATIVE HAPTIC MODULE](https://github.com/Lefuneste83/KLOR/tree/main/PCB/Alternate%20DIY%20Haptic%20Module)
+-  This is an alternative version of the haptic module for those who don't want to spend a fortune on the original one or can't source it. It is for advanced users as you will need some experience in SMD soldering and a hot air or hot plate to solder the linear actuator, and some form of magnification for the driver chip. It works great and is a bit shorter for easier integration. It mounts perfectly on all PCB versions except most likely on the low profile PCB because of the interference with the hotswap socket.
 
 ### [PCB FOR FULL HEIGHT SWITCHES CORRECTED STOCK VERSION (REV 1.3)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_3)
+-  This is as close as it gets to the original design but with some rerouting to allow to pass JLCPCB preproduction validation process. It uses the older style of LED (WS2812 3535) which are very tricky to solder properly, as they are not intended to be mounted this way. I strongly suggest moving to the 1.4 version for a much better build experience and a much more reliable build.
 
 ### [FIRMWARE](https://github.com/Lefuneste83/KLOR/blob/main/FIRMWARE.md)
+-  These are updated QMK and ZMK config files and compiled images. They should have most devices enabled by default and should compile on latest toolchains of ZMK and QMK. A [Github Actions repositiry for ZMK](https://github.com/Lefuneste83/zmk-config-klor) is also available in my other repositories. Keep in mind that I only use ZMK on NRF52840 and QMK on RP2040. I would advise you to do the same as Atmega chips will not support all functionalities of the KLOR keyboard. As a reminder ZMK on NRF52840 will not support audio or haptic yet, but will support OLED to a certain degree and wireless communications with BLE protocol. QMK on RP2040 will support everything except wireless communications.
 
 # CONTEXT
 I have just completed my build of the 1.3 and found it a bit frustrating to assemble, despite my 13 year experience with this kind of project. Don't get me wrong the KLOR project is absolutely marvelous, but the PCB design starts to show its age IMHO, in the details of the layout in particular. Technology wise it is one, if not the best project out there hands down.
