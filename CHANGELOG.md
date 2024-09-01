@@ -1,4 +1,7 @@
 # CHANGELOG
+01/09/2024
+-  While working on a revision of the PCB, I noticed another issue in the original design. If using the TRRS connection on a wired build, the master MCU board is actually powering the totality of the keyboard with its 3.3V voltage regulator as the TRRS transports the down converted 3.3V to the secondary MCU VCC, thus bypassing its regulator. This means that the two MCU, the two LED strips and the I2C devices get their 3.3V from the regulator of the master MCU board only, which tends to overheat quite a bit and is most likely not designed for such a heavy load. Another issue with this topology is that the ARGB LED typically require 5V VCC to operate nominaly, while in this case they are powered with 3.3V only. It works but it is completly unnecessary to down convert the USB/Battery voltage to 3.3V for the LED strips. Note that this has nothing to do with the contol logfic level which MUST be at 3.3V. I will be addressing those issues on a 1.5 revision coming soon...
+
 31/08/2024
 -  Added support for VIAL firmware for RP2040 boards. You can now compile :
    
