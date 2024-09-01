@@ -9,7 +9,7 @@ If you intend to build a KLOR keyboard from this repo please take the time to re
 ### [CHANGELOG](https://github.com/Lefuneste83/KLOR/blob/main/CHANGELOG.md)
 
 ### [PCB FOR FULL HEIGHT SWITCHES (REV 1.4)](https://github.com/Lefuneste83/KLOR/tree/main/PCB/klor1_4)
--  This is my original initial design, derived from the 1.3 with lots of upgrades. I have built it and it works great. The south facing LED and the better suited LED packages make this the best choice for a first KORN build. It keeps the overall design of the original in terms of PCB size and modularity. It is designed for MX style full height hotswap sockets. Gateron or Kailh sockets work great and probably other brands as well. This is not compatible with low profile sockets!
+-  This is my original initial design, derived from the 1.3 with lots of upgrades. I have built it and it works great. The south facing LED and the better suited LED packages make this the best choice for a first KLOR build. It keeps the overall design of the original in terms of PCB size and modularity. It is designed for MX style full height hotswap sockets. Gateron or Kailh sockets work great and probably other brands as well. This is not compatible with low profile sockets!
 
 ### [FABRICATION NOTES (FOR REV 1.4)](https://github.com/Lefuneste83/KLOR/blob/main/FABNOTES.md)
 - These are my recommendations for first time builders of the KLOR keyboard. I suggest to have a read as they explain most tricky points that I have encountered while building mine.
