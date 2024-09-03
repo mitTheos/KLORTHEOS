@@ -64,7 +64,7 @@
       35,
       36
     ],
-    "visible_layers": "fffffff_ffffffff",
+    "visible_layers": "fffff7f_fffffffe",
     "zone_display_mode": 1
   },
   "git": {
@@ -74,7 +74,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "klor1_4.kicad_prl",
+    "filename": "klor1_4_LP_KS33.kicad_prl",
     "version": 3
   },
   "project": {
