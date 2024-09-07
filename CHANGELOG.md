@@ -63,7 +63,12 @@
 23/08/2024
 -  Upddated FIRMWARE directory with working config files for QMK for RP2040 and ZMK for NiceNanoV2. These are not perfect but both firmware compile without errors and have the maximum functionalities enabled by default.
 -  Added precompiled [qmk](https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE/Ready-to-flash/qmk-RP2040) and [zmk](https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE/Ready-to-flash/zmk-NiceNanoV2) firmware
--  Added link for a [full polydactyl layout](http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a) on the layout editor website
+-  For extra convienence if you intend to modify your firmware for a smaller layout, I have created a link to :
+
+    -  A [full POLYDACTYL layout](http://www.keyboard-layout-editor.com/#/gists/8ff2b448f2ef6c56c2b932e83ebf040f)
+    -  A [KONRAD layout](http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a)
+    -  A [YUBITSUME layout](http://www.keyboard-layout-editor.com/#/gists/dc3fdb427b3102ccbf85252e2e278918)
+    -  A [SAEGEWERK layout](http://www.keyboard-layout-editor.com/#/gists/b3775d73a84de0d544ea3bf84bafb047)
 
 09/08/2024
 - Correction of a 0.45 mm interference between hot swap socket and bottom of haptic buzz module. The module has been moved upwards by 0.6 mm to clear the interference for those willing to install the stock haptic module.

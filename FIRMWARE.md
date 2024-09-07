@@ -5,7 +5,12 @@ It has both encoders working, precise pulse per rotation adjustments and RGB ena
 
 Config files for both QMK and ZMK can be [found here](https://github.com/Lefuneste83/KLOR/tree/main/FIRMWARE):
 
-For extra convienence if you intend to modify your firmware for a smaller layout, I have created a link to a [full polydactyl layout](http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a) on the layout editor website.
+For extra convienence if you intend to modify your firmware for a smaller layout, I have created a link to :
+
+ -  A [full POLYDACTYL layout](http://www.keyboard-layout-editor.com/#/gists/8ff2b448f2ef6c56c2b932e83ebf040f)
+ -  A [KONRAD layout](http://www.keyboard-layout-editor.com/#/gists/49ff09e68b46feb39760467424a4601a)
+ -  A [YUBITSUME layout](http://www.keyboard-layout-editor.com/#/gists/dc3fdb427b3102ccbf85252e2e278918)
+ -  A [SAEGEWERK layout](http://www.keyboard-layout-editor.com/#/gists/b3775d73a84de0d544ea3bf84bafb047)
 
 ****
 
@@ -13,29 +18,23 @@ For extra convienence if you intend to modify your firmware for a smaller layout
    
       the "default" layout using [QMK toolchain](https://github.com/qmk/qmk_firmware) and the command :
 
-            qmk compile -kb klor -km default -c
+            qmk compile -kb electronlab/klor -km default -c
    
       or "vial" layout using [vial-qmk toolchain](https://github.com/vial-kb/vial-qmk) and the command :
 
-            make clean && make klor:vial
-   
--   NB : In both cases I had to modify the file ./platforms/chibios/boards/QMK_PM2040/configs/mcuconf.h and change the line :
-
-           #define RP_PWM_USE_PWM4                     FALSE
-           to
-           #define RP_PWM_USE_PWM4                     TRUE
+            make clean && make electronlab/klor:vial
     
 -   Also be aware that I have now enabled firmware based handeness definition ([#define EE_HANDS setting](https://docs.qmk.fm/features/split_keyboard)) so you should flash the firmware using the following commands for left and right keyboard sides :
 -   
    For QMK environment
     
-             qmk flash -kb klor -km default -c -bl uf2-split-left
-             qmk flash -kb klor -km default -c -bl uf2-split-right
+             qmk flash -kb electronlab/klor -km default -c -bl uf2-split-left
+             qmk flash -kb electronlab/klor -km default -c -bl uf2-split-right
     
   For VIAL-QMK environment
      
-             qmk flash -kb klor -km vial -c -bl uf2-split-left
-             qmk flash -kb klor -km vial -c -bl uf2-split-right
+             qmk flash -kb electronlab/klor -km vial -c -bl uf2-split-left
+             qmk flash -kb electronlab/klor -km vial -c -bl uf2-split-right
 
 -  Make sure you switch your serial communication to HALF DUPLEX as software pin swap used for full duplex does not seem to work well with firmware based handeness detection. If you alyays want to plug one side of the keyboard then you can set the master side in config.h and switch to full duplex with software pin swap. This will require a little testing but it will work eventually
 
