@@ -13,29 +13,23 @@ For extra convienence if you intend to modify your firmware for a smaller layout
    
       the "default" layout using [QMK toolchain](https://github.com/qmk/qmk_firmware) and the command :
 
-            qmk compile -kb klor -km default -c
+            qmk compile -kb electronlab/klor -km default -c
    
       or "vial" layout using [vial-qmk toolchain](https://github.com/vial-kb/vial-qmk) and the command :
 
-            make clean && make klor:vial
-   
--   NB : In both cases I had to modify the file ./platforms/chibios/boards/QMK_PM2040/configs/mcuconf.h and change the line :
-
-           #define RP_PWM_USE_PWM4                     FALSE
-           to
-           #define RP_PWM_USE_PWM4                     TRUE
+            make clean && make electronlab/klor:vial
     
 -   Also be aware that I have now enabled firmware based handeness definition ([#define EE_HANDS setting](https://docs.qmk.fm/features/split_keyboard)) so you should flash the firmware using the following commands for left and right keyboard sides :
 -   
    For QMK environment
     
-             qmk flash -kb klor -km default -c -bl uf2-split-left
-             qmk flash -kb klor -km default -c -bl uf2-split-right
+             qmk flash -kb electronlab/klor -km default -c -bl uf2-split-left
+             qmk flash -kb electronlab/klor -km default -c -bl uf2-split-right
     
   For VIAL-QMK environment
      
-             qmk flash -kb klor -km vial -c -bl uf2-split-left
-             qmk flash -kb klor -km vial -c -bl uf2-split-right
+             qmk flash -kb electronlab/klor -km vial -c -bl uf2-split-left
+             qmk flash -kb electronlab/klor -km vial -c -bl uf2-split-right
 
 -  Make sure you switch your serial communication to HALF DUPLEX as software pin swap used for full duplex does not seem to work well with firmware based handeness detection. If you alyays want to plug one side of the keyboard then you can set the master side in config.h and switch to full duplex with software pin swap. This will require a little testing but it will work eventually
 
