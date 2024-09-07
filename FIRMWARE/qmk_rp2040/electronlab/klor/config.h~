@@ -22,22 +22,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // │ p i n   c o n f i g                             │
 // └─────────────────────────────────────────────────┘ 
 
-#undef RP_I2C_USE_I2C1
-#define RP_I2C_USE_I2C1 TRUE
 #define I2C1_SCL_PIN GP3
 #define I2C1_SDA_PIN GP2
 
-#undef RP_PWM_USE_PWM4
-#define RP_PWM_USE_PWM4 TRUE
-
-#undef RP_PWM_USE_TIM1
-#define RP_PWM_USE_TIM1 TRUE
+//#undef RP_PWM_USE_PWM4
+//#define RP_PWM_USE_PWM4 TRUE
+//
+//#undef RP_PWM_USE_TIM1
+//#define RP_PWM_USE_TIM1 TRUE
 
 //#undef HAL_USE_I2C
 //#define HAL_USE_I2C TRUE
-
-#undef HAL_USE_PWM
-#define HAL_USE_PWM TRUE
+//
+//#undef HAL_USE_PWM
+//#define HAL_USE_PWM TRUE
+//
+//#undef HAL_USE_SPI
+//#define HAL_USE_SPI FALSE
 
 //#undef HAL_USE_PAL
 //#define HAL_USE_PAL TRUE

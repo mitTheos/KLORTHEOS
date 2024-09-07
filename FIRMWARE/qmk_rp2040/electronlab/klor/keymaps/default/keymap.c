@@ -322,23 +322,23 @@ int dmacro_num = 0;
 
 
     // DYNMACRO RECORD ├─────────────────────────────────────────────────────────────┐
-    void dynamic_macro_record_start_user(int8_t direction) {
+    bool dynamic_macro_record_start_user(int8_t direction) {
           dmacro_num = 1;
-        return;
+        return false;
     }
 
     // DYNMACRO STOP RECORDING ├─────────────────────────────────────────────────────┐
-    void dynamic_macro_record_end_user(int8_t direction) {
+    bool dynamic_macro_record_end_user(int8_t direction) {
           dmacro_num = 2;
           dmacro_timer = timer_read();
-        return; 
+        return false;
     }
 
     // DYNMACRO PLAY RECORDING ├─────────────────────────────────────────────────────┐
-    void dynamic_macro_play_user(int8_t direction) {
+    bool dynamic_macro_play_user(int8_t direction) {
           dmacro_num = 3;
           dmacro_timer = timer_read();
-        return; 
+        return false;
     }
 #endif //DYNAMIC_MACRO_ENABLE
 

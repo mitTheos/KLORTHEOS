@@ -21,8 +21,8 @@ see https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 for more options.
 */
 
-#define EE_HANDS
-//#define MASTER_LEFT
+//#define EE_HANDS
+#define MASTER_LEFT
 // #define MASTER_RIGHT
 
 //#define TAPPING_TERM 170
@@ -42,8 +42,8 @@ for more options.
 //#define NO_ACTION_TAPPING
 //#define NO_MUSIC_MODE
 
-#define COMBO_COUNT 25
-//#define VIAL_COMBO_ENTRIES 25
+#define COMBO_COUNT 3
+//#define VIAL_COMBO_ENTRIES 3
 // RGB matrix support
 #ifdef RGB_MATRIX_ENABLE
 // RGB Matrix Animation modes. Explicitly enabled
