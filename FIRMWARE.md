@@ -24,7 +24,7 @@ For extra convienence if you intend to modify your firmware for a smaller layout
 
             make clean && make electronlab/klor:vial
     
--   Also be aware that I have now enabled firmware based handeness definition ([#define EE_HANDS setting](https://docs.qmk.fm/features/split_keyboard)) so you should flash the firmware using the following commands for left and right keyboard sides :
+-   Also be aware that I have now enabled firmware based handedness definition ([#define EE_HANDS setting](https://docs.qmk.fm/features/split_keyboard)) so you should flash the firmware using the following commands for left and right keyboard sides :
 -   
    For QMK environment
     
@@ -36,7 +36,7 @@ For extra convienence if you intend to modify your firmware for a smaller layout
              qmk flash -kb electronlab/klor -km vial -c -bl uf2-split-left
              qmk flash -kb electronlab/klor -km vial -c -bl uf2-split-right
 
--  Make sure you switch your serial communication to HALF DUPLEX as software pin swap used for full duplex does not seem to work well with firmware based handeness detection. If you alyays want to plug one side of the keyboard then you can set the master side in config.h and switch to full duplex with software pin swap. This will require a little testing but it will work eventually
+-  Make sure you switch your serial communication to HALF DUPLEX as software pin swap used for full duplex does not seem to work well with firmware based handedness detection. If you alyays want to plug one side of the keyboard then you can set the master side in config.h and switch to full duplex with software pin swap. This will require a little testing but it will work eventually
 
 -  While playing with QMK I have noticed that the original 1.3 design carried a wiring flaw on the minijack footprint and PCB traces. The RX/TX are symetrical between the two sides which makes it impossible to define the transmission protocol in QMK as serial full duplex with RP2040 ProMicro boards if you don't specify a pin swap command. By default the stock firmware uses bitbang driver on a single pin which is not optimal and made the use of a TRRS link unnecessary as 3 pins cable would suffice. If you use these boards you should set the following in the config.h for QMK if using RP2040 ProMicro boards.
       
