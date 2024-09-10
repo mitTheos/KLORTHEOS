@@ -1,4 +1,13 @@
 # CHANGELOG
+10/09/2024
+-  Here we go! The new 1.5 Revision in its first iteration has been built and works as expected solving little issues remaining and improving greatly over the previous versions.
+-  The combination of direct USB 5V supply and distribution between the two boards, full duplex transmission, handedness hardware detection, dedicated lock status LED and integrated haptic transducer and driver all make this version a killer ergo keyboard! It is really super bright now and the main MCU does not overheat anymore.
+
+![image](https://github.com/Lefuneste83/KLOR/blob/main/docs/images/KLOR_1.5_picture1.png)
+![image](https://github.com/Lefuneste83/KLOR/blob/main/docs/images/KLOR_1.5_picture2.png)
+![image](https://github.com/Lefuneste83/KLOR/blob/main/docs/images/KLOR_1.5_picture3.png)
+![image](https://github.com/Lefuneste83/KLOR/blob/main/docs/images/KLOR_1.5_picture4.png)
+![image](https://github.com/Lefuneste83/KLOR/blob/main/docs/images/KLOR_1.5_picture5.png)
 
 07/09/2024
 -  For those interested in the KLOR project I have finished developping a new version of KLOR PCB with an important revision 1.5 bringing the following upgrades:
