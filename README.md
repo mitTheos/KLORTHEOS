@@ -1,4 +1,20 @@
 # Welcome to my take on the great KLOR Split Keyboard Project
+
+My addition to the project includes the addition of a 5 way switch to the thumb cluster for the LP KS55 version with the revision 1.5.
+
+I got inspiration for the usage of a 5way switch from [the Fulcrum project](https://github.com/dschil138/Fulcrum) and found the there described uses for it intriguing. The project however went into a different flavor of split kb then what I was looking for. The KLOR on the other hand matching that very well. My keyboard of choice before the KLOR was a Sofle. Which I was very happy with but still left somethign to be desired. Ultimately I wanted a keyboard that was:
+- wireless
+- had stronger row stagger than the Sofle
+- had 5way switches
+- had rotary encoders
+- low profile
+- used less keys than the Sofle
+
+I think with my modification of the KLOR I should be able to check all of these boxes.
+
+*To note: for the addition of the 5 way switch I removed the switch 22 (obviously) but also the audio buzzer and the trackball modules to make more space. I have no intention of using either one and the additional space that came with removing them made the routing a tad easier which was welcome as this was my first take on PCB modification.*
+
+# Lefuneste's notes
 Here you'll find an up do date version of KLOR PCB and firmware files for Rev 1.4 for full height Cherry switches and a Rev 1.4 LP KS33 version for low profile KS33 Gateron switches.
 
 If you intend to build a KLOR keyboard from this repo please take the time to read the different sections below.
