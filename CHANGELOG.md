@@ -115,3 +115,7 @@
 -  ZMK Firmware modifications in order to be able to set per rotation pulses for each encoder. Both encoders work as expected. RGB light has been enabled by default as well.
 
 --> If you intend to generate your own gerbers instead of the ones provided, make sure to process drill files AND flag the "Substract soldermask layer from copper pads" option (otherwise the KLOR Logo will superimpose on some of the SMD pads rendering soldering impossible without manual scratching of the covered pads). Guess how I know...
+
+01/05/2025
+
+- add rev1_5 which attempts to swap out one of the switches on the thumb cluster (SW22) with a 5 way switch with a desing based on the one used in [the Djinn](https://github.com/tzarc/keyboards/tree/main/Djinn)
